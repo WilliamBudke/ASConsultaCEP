@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-//import 'package:flushbar/flushbar.dart';
+import 'package:flushbar/flushbar.dart';
 import 'package:share/share.dart';
 import 'package:web_service/services/via_cep_service.dart';
 
@@ -103,8 +103,7 @@ class _HomePageState extends State<HomePage> {
 
       _searching(false);
     }else{
-      _result = 'CEP Inválido';
-      /*Flushbar(
+      Flushbar(
         title: 'Erro',
         messageText: Text('CEP Inválido'),
         backgroundColor: Colors.lightBlue,
@@ -112,7 +111,7 @@ class _HomePageState extends State<HomePage> {
         duration: Duration(seconds: 2),
         reverseAnimationCurve: Curves.easeInOut,
         forwardAnimationCurve: Curves.bounceInOut,
-      ).show(context);*/
+      ).show(context);
     }
   }
 
